@@ -41,6 +41,7 @@ module.exports = {
     // override the messages, defaults are as follows
     messages: {
       type: "Selecione o tipo de alteração que você está commitando:",
+      scope: '\nDefina o scopo da alteração (opicional):',
       subject: 'Faça uma descrição das alterações realizadas:\n',
       confirmCommit: 'Tem certeza que deseja proseguir com o commit acima?',
     },
