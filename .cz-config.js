@@ -1,12 +1,12 @@
 module.exports = {
     types: [
-      { value: 'novo', name: 'novo:     Quando o desenvolvimento é relacionado a uma nova funcionalidade' },
-      { value: 'correcao', name: 'correção:      Quando a alteração se trata da correção de um bug.' },
-      { value: 'docs', name: 'docs:     Quando se trata somente de uma alteração na documentação, como uma atualização no README.' },
+      { value: 'novo', name: 'novo:     Novas funcionalidades' },
+      { value: 'correcao', name: 'correção:      Correção de bugs.' },
+      { value: 'docs', name: 'docs:     Alteração na documentação, como uma atualização no README.' },
       {
         value: 'estilo',
         name:
-          'estilo:    Quando a alteração se trata somente de folhas de estilo.',
+          'estilo:   Alteração nas folhas de estilo.',
       },
       {
         value: 'refatoracao',
@@ -40,14 +40,15 @@ module.exports = {
     */
     // override the messages, defaults are as follows
     messages: {
-      type: "Selecione o tipo de alteração que você está commitando:",
-      scope: '\nDefina o scopo da alteração (opicional):',
-      subject: 'Faça uma descrição das alterações realizadas:\n',
-      confirmCommit: 'Tem certeza que deseja proseguir com o commit acima?',
+      type: "Selecione o tipo de alteração que você deseja realizar:",
+      customScope: '\nDefina o escopo da alteração (opcional):',
+      subject: '\nFaça uma descrição das alterações realizadas:',
+      footer: '\nListe as ISSUES encerradas por essa alteração (opcional). Ex.: #31, #34:',
+      confirmCommit: '\nTem certeza que deseja prosseguir com o commit acima?',
     },
   
     allowCustomScopes: true,
-    allowBreakingChanges: ['novo', 'correcao'],
+    allowBreakingChanges: false,
     // skip any questions you want
     skipQuestions: ['body'],
   
