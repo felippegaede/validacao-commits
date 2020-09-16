@@ -1,32 +1,26 @@
 module.exports = {
     types: [
-      { value: 'feat', name: 'novo:     A new feature' },
-      { value: 'fix', name: 'correção:      A bug fix' },
-      { value: 'docs', name: 'docs:     Documentation only changes' },
+      { value: 'novo', name: 'novo:     Quando o desenvolvimento é relacionado a uma nova funcionalidade' },
+      { value: 'correcao', name: 'correção:      Quando a alteração se trata da correção de um bug.' },
+      { value: 'docs', name: 'docs:     Quando se trata somente de uma alteração na documentação, como uma atualização no README.' },
       {
-        value: 'style',
+        value: 'estilo',
         name:
-          'estilo:    Changes that do not affect the meaning of the code\n            (white-space, formatting, missing semi-colons, etc)',
+          'estilo:    Quando a alteração se trata somente de folhas de estilo.',
       },
       {
-        value: 'refatoração',
-        name: 'refactor: A code change that neither fixes a bug nor adds a feature',
+        value: 'refatoracao',
+        name: 'refatoração: Quando a alteração se trata de uma refatoração no código. ',
       },
+      { value: 'teste', name: 'teste:     Quando foram escritos ou corrigidos apenas testes. '},
       {
-        value: 'perf',
-        name: 'pedormace:     A code change that improves performance',
-      },
-      { value: 'test', name: 'teste:     Adding missing tests' },
-      {
-        value: 'chore',
+        value: 'biblioteca',
         name:
-          'bibilioteca:    Changes to the build process or auxiliary tools\n            and libraries such as documentation generation',
-      },
-      { value: 'revert', name: 'revert:   Revert to a commit' },
-      { value: 'WIP', name: 'WIP:      Work in progress' },
+          'biblioteca:    Instalação de nova biblioteca.',
+      },      
+      { value: 'WIP', name: 'WIP:      Work in progress, quando uma feature não foi concluida, mas precisa ser commitada' },
     ],
   
-    scopes: [{ name: 'accounts' }, { name: 'admin' }, { name: 'exampleScope' }, { name: 'changeMe' }],
   
     allowTicketNumber: false,
     isTicketNumberRequired: false,
@@ -46,7 +40,7 @@ module.exports = {
     */
     // override the messages, defaults are as follows
     messages: {
-      type: "Select the type of change that you're committing:",
+      type: "Selecione o tipo de alteração que você está commitando:",
       scope: '\nDenote the SCOPE of this change (optional):',
       // used if allowCustomScopes is true
       customScope: 'Denote the SCOPE of this change:',
