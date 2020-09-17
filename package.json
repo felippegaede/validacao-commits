@@ -3,18 +3,19 @@
     "husky": {
         "hooks": {
             "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-            "pre-commit": "exec < /dev/tty && ./node_modules/cz-customizable/standalone.js --hook || true"
+            "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
+            "post-commit": "echo Commit realizado com sucesso!"
         }
     },
-    "dev": "npm run development",
-        "scripts": {
+    "scripts": {
+        "dev": "npm run development",
         "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
         "watch": "npm run development -- --watch",
         "watch-poll": "npm run watch -- --watch-poll",
         "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
         "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
-        
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "commit": "./node_modules/cz-customizable/standalone.js"
     },
     "devDependencies": {
         "@commitlint/cli": "^11.0.0",

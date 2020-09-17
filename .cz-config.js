@@ -6,13 +6,13 @@ module.exports = {
       {
         value: 'estilo',
         name:
-          'estilo:   Alteração nas folhas de estilo.',
+          'estilo:   Alteração nas folhas de estilo. ex.: Espaços em branco, formatação etc.',
       },
       {
         value: 'refatoracao',
-        name: 'refatoração: Quando a alteração se trata de uma refatoração no código. ',
+        name: 'refatoração: Alteração no código que não corrige erros e não adiciona novas funcionalidades. ',
       },
-      { value: 'teste', name: 'teste:     Quando foram escritos ou corrigidos apenas testes. '},
+      { value: 'teste', name: 'teste:     Alteração que adiciona ou corrige testes. '},
       {
         value: 'biblioteca',
         name:
